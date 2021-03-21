@@ -67,7 +67,7 @@ class System {
   sendEmail(email, code) {
     const companyURL = "https://forest.ly";
     const link =
-      "https://forestly.netlify.app/confirm-email-address?token=" + code;
+      process.env.WEB_APP_URL + "/confirm-email-address?token=" + code;
     const mail = {
       from: "Hafiz Muhammad Farooq <farooq@we-over-i.com>",
       to: email,
@@ -94,7 +94,8 @@ class System {
 
   forgotPasswordEmail(email, code) {
     const link =
-      "https://forestly.netlify.app/reset-password-confirmarion?reset_code=" +
+      process.env.WEB_APP_URL +
+      "/reset-password-confirmarion?reset_code=" +
       code;
     const mail = {
       from: "Hafiz Muhammad Farooq <farooq@we-over-i.com>",
