@@ -1,7 +1,7 @@
 "use strict";
 exports.setup = function (app) {
   /* test route */
-  var testRoute = require("./testRoute");
+  var testRoute = require("./TestRoute");
 
   /* auth routes*/
   const authRoutes = require("./AuthRoutes");
