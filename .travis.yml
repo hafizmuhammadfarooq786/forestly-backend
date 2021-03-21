@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+node_js:
+  - "12"
+  - "10"
+  - "8"
+branches:
+  only:
+    - master
+cache:
+  npm: true
+script: npm test
+before_script:
+  - config.json
+os:
+  - linux
+notifications:
+  slack: fullstackacademycrew:jWrEWhY23pkS8M7hpOgcKE7B
